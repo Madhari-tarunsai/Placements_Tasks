@@ -1,0 +1,24 @@
+.word h1{
+    color: crimson;
+    display: flex;
+}
+#image img {
+    height: 350px;
+    width: 350px;
+}
+.word {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center;    */
+    gap: 50px;             
+    padding: 20px;
+    background-color: aqua;
+}
+#image1 img{
+     height: 350px;
+    width: 350px;
+}
+#data img{
+    position:absolute;
+    
+}
