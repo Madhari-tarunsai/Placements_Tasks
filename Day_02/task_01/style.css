@@ -1,0 +1,57 @@
+#display a{
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+}
+#display{
+    background-color: aquamarine;
+    width: 450px;
+    padding: 100px;
+}
+#data{
+    background-color: blue;
+    padding: 20px;
+}
+#options {
+    display: flex;
+    flex-direction:row;
+    gap: 10px; 
+    justify-content: center;
+}
+
+#options a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 5px;
+}
+#right p{
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+}
+#right{
+    background-color: burlywood;
+    height: 450px;
+    width: 450px;
+    
+}
+#right h1 {
+    text-align: center;
+}
+#left h1{
+    text-align: center;
+}
+#left p{
+    font-size: larger;
+       display: flex;
+    justify-content: center;
+}
+#left{
+    background-color:cadetblue;
+    height: 450px;
+    width: 450px;
+    display: none;
+}
+#sidebar{
+    display: flex;
+}
