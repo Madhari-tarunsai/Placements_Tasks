@@ -1,0 +1,33 @@
+<!-- Use DOM methods to capture input, display output, and update UI dynamically. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<form action="" id="detail_form">
+    <label for="name">enter a name:</label>
+    <input type="text" id="name" value="name" placeholder="enter name" required><br><br>
+    <label for="mail">Enter a email:</label>
+    <input type="email" id="mail" value="mail" placeholder="enter email" required>
+    <button id="btn" type="submit">Submit</button>
+</form>
+<div id="output" style="margin-top:20px; font-size:18px; font-weight:bold;"></div>
+<!-- dynamic actions -->
+<script>
+    document.getElementById("detail_form").addEventListener("submit",function(event){
+        event.preventDefault()
+        alert('details submited')
+        let usename=document.getElementById("name").value;
+        let useemail=document.getElementById("mail").value;
+        // display_output
+        document.getElementById("output").innerHTML=
+            `Name:${usename}  <br>
+            Email:${useemail}`;
+    })
+        
+</script>
+</body>
+</html>
