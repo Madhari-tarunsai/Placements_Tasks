@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let become = true;
+      function frontend() {
+        return new Promise((res, rej) => {
+          if (true) {
+            setTimeout(() => {
+              res("im become a frontend developer");
+            }, 2000);
+          } else {
+            rej("not able to become a frontend dev");
+          }
+        });
+      }
+      function backend() {
+        return new Promise((res, rej) => {
+          if (true) {
+            setTimeout(() => {
+              res("im become a backend developer");
+            }, 2000);
+          } else {
+            rej("not able to become a frontend dev");
+          }
+        });
+      }
+      function fullstack() {
+        return new Promise((res, rej) => {
+          if (true) {
+            setTimeout(() => {
+              res("im become a fullstack developer");
+            }, 2000);
+          } else {
+            rej("not able to become a frontend dev");
+          }
+        });
+      }
+      frontend()
+        .then((x) => {
+          console.log(x);
+          return backend();
+        })
+        .then((x) => {
+          console.log(x);
+          return fullstack();
+        })
+        .then((x) => {
+          console.log(x);
+        })
+        .catch((x) => {
+          console.log(x);
+        });
+    </script>
+  </body>
+</html>
