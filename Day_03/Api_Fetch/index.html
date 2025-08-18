@@ -7,27 +7,24 @@
   </head>
   <body>
     <script>
-      let data=fetch("https://dummyjson.com/recipes")
-        data.then((x) => x.json())
-        .then((x)=>{
-            let res=x.recipes;
-            res.map((x)=>{
-                console.log(x.name)
-                let name=document.createElement("h1")
-                name.innerHTML=x.name
-                
+      let data = fetch("https://dummyjson.com/recipes");
+      data
+        .then((x) => x.json())
+        .then((x) => {
+          let res = x.recipes;
+          res.map((x) => {
+            console.log(x.name);
+            let name = document.createElement("h1");
+            name.innerHTML = x.name;
 
-                let des=document.createElement("p")
-                des.innerHTML=x.ingredients
+            let des = document.createElement("p");
+            des.innerHTML = x.ingredients;
 
+            let rating = document.createElement("h3");
+            rating.innerHTML = x.rating;
 
-                let rating=document.createElement("h3")
-                rating.innerHTML=x.rating
-
-
-                document.body.append(name,des,rating)
-            })
-            
+            document.body.append(name, des, rating);
+          });
         })
         .catch((err) => console.log(err));
     </script>
